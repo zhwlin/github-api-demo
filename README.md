@@ -14,19 +14,23 @@ It works on JDK8 or above.
 － Add system environment variables
 
 |Name| Value|
-| ---- | ---- | ---- |
+| :--- | ---|
 | GITHUB_OWNER| Your user name|
 |GITHUB_REPO| The name of target repository|
-|GITHUB_BRANC| The name of target branch  |
+|GITHUB_BRANCH| The name of target branch  |
 |GITHUB_TOKEN| The access token|
-
-
-
+ 
 
 - Run command:
 
-```shell
-gradlew test
-```
+  - Linux
+    ```shell
+    export GITHUB_TOKEN="tyyy"
+    export GITHUB_REPO="hello"
+    export GITHUB_BRANCH="ooop" 
+    export GITHUB_OWNER="xx"
+
+    gradlew test
+    ```
 
 
