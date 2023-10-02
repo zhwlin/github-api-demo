@@ -8,7 +8,6 @@ import java.util.Base64;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import org.springframework.util.Assert;
 
@@ -59,7 +58,7 @@ public class SourceFilesChangeListBuilder {
                 log.warn("Failed to calculate file size.", e);
             }
             return 0L;
-        }).collect(Collectors.reducing(0L, (a, b) -> a + b));
+        }).reduce(0L, (a,b) -> a+b);
     }
 
     public String getChangeList() {
